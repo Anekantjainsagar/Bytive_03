@@ -1,2 +1,2 @@
-const URL = "http://localhost:5000";
+const URL = "https://bytive-03-backend.onrender.com";
 export default URL;
