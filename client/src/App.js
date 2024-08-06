@@ -20,7 +20,7 @@ const App = () => {
     <div className="overflow-y-auto">
       <Navbar />
       <Toaster />
-      <div className="mt-[6.5vh] grid grid-cols-4 gap-5 px-8">
+      <div className="mt-[10vh] md:mt-[6.5vh] grid md:grid-cols-4 gap-5 px-4 md:px-8">
         {data
           ?.filter((e) => {
             if (search) {

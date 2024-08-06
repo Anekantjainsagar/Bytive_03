@@ -11,7 +11,7 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    width: "25vw",
+    width: window.innerWidth < 600 ? "90vw" : "25vw",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
   },
@@ -57,7 +57,7 @@ function EditProfile({ modalIsOpen, setIsOpen, data }) {
             <img
               src={state?.profile}
               alt={state?.name + " Profile"}
-              className="rounded-full w-[4vw] mr-3 border border-gray-500"
+              className="rounded-full w-[12vw] md:w-[4vw] mr-3 border border-gray-500"
             />
             <input
               type="file"
@@ -83,10 +83,10 @@ function EditProfile({ modalIsOpen, setIsOpen, data }) {
             />
           </div>
           <div className="w-full flex items-center mb-3">
-            <p className="w-2/12">Name:</p>
+            <p className="w-3/12 md:w-2/12">Name:</p>
             <input
               type="text"
-              className="border w-10/12 rounded-md outline-none px-3 py-1"
+              className="border w-9/12 md:w-10/12 rounded-md outline-none px-3 py-1"
               placeholder="Enter your name"
               value={state?.name}
               onChange={(e) => {
@@ -95,10 +95,10 @@ function EditProfile({ modalIsOpen, setIsOpen, data }) {
             />
           </div>
           <div className="w-full flex items-center mb-3">
-            <p className="w-2/12">Email:</p>
+            <p className="w-3/12 md:w-2/12">Email:</p>
             <input
               type="text"
-              className="border w-10/12 rounded-md outline-none px-3 py-1"
+              className="border w-9/12 md:w-10/12 rounded-md outline-none px-3 py-1"
               placeholder="Enter your email"
               value={state?.email}
               onChange={(e) => {
@@ -107,10 +107,10 @@ function EditProfile({ modalIsOpen, setIsOpen, data }) {
             />
           </div>
           <div className="w-full flex items-center mb-3">
-            <p className="w-2/12">Phone:</p>
+            <p className="w-3/12 md:w-2/12">Phone:</p>
             <input
               type="text"
-              className="border w-10/12 rounded-md outline-none px-3 py-1"
+              className="border w-9/12 md:w-10/12 rounded-md outline-none px-3 py-1"
               placeholder="Enter your phone"
               value={state?.phone}
               onChange={(e) => {
@@ -119,10 +119,10 @@ function EditProfile({ modalIsOpen, setIsOpen, data }) {
             />
           </div>
           <div className="w-full flex items-center">
-            <p className="w-2/12">Website:</p>
+            <p className="w-3/12 md:w-2/12">Website:</p>
             <input
               type="text"
-              className="border w-10/12 rounded-md outline-none px-3 py-1"
+              className="border w-9/12 md:w-10/12 rounded-md outline-none px-3 py-1"
               placeholder="Enter your website"
               value={state?.website}
               onChange={(e) => {
